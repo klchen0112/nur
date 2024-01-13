@@ -48,5 +48,6 @@
           sha256 = "sha256-oM6fXdXCWVcBnNrzXmF0ZMdp8j0pzkLE66WteeCutv8=";
         })
       ];
+    meta.platforms = pkgs.lib.platforms.darwin;
   });
 }
