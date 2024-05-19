@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
     owner = "catppuccin";
     repo = "btop";
     rev = version;
-    hash = "sha256-J3UezOQMDdxpflGax0rGBF/XMiKqdqZXuX4KMVGTxFk=";
+    hash = "sha256-UXeTypc15MhjgGUiCrDUZ40m32yH2o1N+rcrEgY6sME=";
   };
 
   installPhase = ''
