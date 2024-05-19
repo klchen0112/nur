@@ -5,14 +5,14 @@
   fetchFromGitHub,
 }:
 stdenv.mkDerivation rec {
-  pname = "catppuccin-alacritty";
-  version = "6c66bd9";
+  pname = "catppuccin-starship";
+  version = "5629d23";
 
   src = fetchFromGitHub {
     owner = "catppuccin";
-    repo = "alacritty";
-    rev = version;
-    hash = "sha256-jgGjdgVHrG4/uQU6GjDvd+ogM8NonoUjwpzYnEQuenc=";
+    repo = "starship";
+    rev = "5629d23";
+    hash = "sha256-nsRuxQFKbQkyEI4TXgvAjcroVdG+heKX5Pauq/4Ota0=";
   };
 
   installPhase = ''
@@ -23,11 +23,11 @@ stdenv.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "Soothing pastel theme for Alacritty";
-    homepage = "https://github.com/catppuccin/alacritty";
+    description = "Soothing pastel theme for Starship";
+    homepage = "https://github.com/catppuccin/starship";
     license = licenses.mit;
     maintainers = with maintainers; [];
-    mainProgram = "alacritty";
+    mainProgram = "starship";
     platforms = platforms.all;
   };
 }

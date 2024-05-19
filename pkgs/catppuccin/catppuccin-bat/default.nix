@@ -5,14 +5,14 @@
   fetchFromGitHub,
 }:
 stdenv.mkDerivation rec {
-  pname = "catppuccin-alacritty";
-  version = "6c66bd9";
+  pname = "catppuccin-btop";
+  version = "21b8d5956a8b07fa52519e3267fb3a2d2e693d17";
 
   src = fetchFromGitHub {
     owner = "catppuccin";
-    repo = "alacritty";
+    repo = "btop";
     rev = version;
-    hash = "sha256-jgGjdgVHrG4/uQU6GjDvd+ogM8NonoUjwpzYnEQuenc=";
+    hash = "sha256-J3UezOQMDdxpflGax0rGBF/XMiKqdqZXuX4KMVGTxFk=";
   };
 
   installPhase = ''
@@ -23,11 +23,11 @@ stdenv.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "Soothing pastel theme for Alacritty";
-    homepage = "https://github.com/catppuccin/alacritty";
+    description = "Soothing pastel theme for btop";
+    homepage = "https://github.com/catppuccin/btop";
     license = licenses.mit;
     maintainers = with maintainers; [];
-    mainProgram = "alacritty";
+    mainProgram = "btop";
     platforms = platforms.all;
   };
 }
