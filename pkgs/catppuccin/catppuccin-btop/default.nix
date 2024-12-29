@@ -6,7 +6,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "catppuccin-bat";
-  version = "d714cc1d358ea51bfc02550dabab693f70cccea0";
+  version = "d3feec47b16a8e99eabb34cdfbaa115541d374fc";
 
   src = fetchFromGitHub {
     owner = "catppuccin";

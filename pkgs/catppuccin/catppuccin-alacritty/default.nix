@@ -6,7 +6,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "catppuccin-alacritty";
-  version = "6c66bd9";
+  version = "343cf8d65459ac8f6449cc98dd3648bcbd7e3766";
 
   src = fetchFromGitHub {
     owner = "catppuccin";

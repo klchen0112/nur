@@ -6,7 +6,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "catppuccin-starship";
-  version = "5629d23";
+  version = "3c4749512e7d552adf48e75e5182a271392ab176";
 
   src = fetchFromGitHub {
     owner = "catppuccin";
