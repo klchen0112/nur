@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
     owner = "catppuccin";
     repo = "alacritty";
     rev = version;
-    hash = "sha256-jgGjdgVHrG4/uQU6GjDvd+ogM8NonoUjwpzYnEQuenc=";
+    hash = "sha256-5MUWHXs8vfl2/u6YXB4krT5aLutVssPBr+DiuOdMAto=";
   };
 
   installPhase = ''
