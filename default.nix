@@ -7,7 +7,8 @@
 #     nix-build -A mypackage
 {
   pkgs ? import <nixpkgs> {}, # For nixpkgs dependencies used by NUR itself
-}: {
+}:
+{
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib {inherit pkgs;}; # functions
   modules = import ./modules; # NixOS modules
@@ -18,4 +19,6 @@
   # ...
   TsangerJinKai02 = pkgs.callPackage ./pkgs/TsangerJinKai02 {};
   Jigmo = pkgs.callPackage ./pkgs/Jigmo {};
-} // (pkgs.callPackage ./pkgs/catppuccin {})
+  mps-darwin = pkgs.callPackage ./pkgs/mps-darwin {};
+}
+// (pkgs.callPackage ./pkgs/catppuccin {})
