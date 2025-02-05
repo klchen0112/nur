@@ -13,18 +13,22 @@
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     maintainers = [lib.maintainers.thoughtpolice];
   };
+  version = "2024-11-27";
+  rev = "9fd0577cf1231e61c9801c81499e5d16d0743806";
+  sha256 = "sha256-m4BnELLy7G13Z/tG//zOwti1XokeEtonDKfr3kGiHCA=";
 in
   if stdenv.isLinux
   then
     stdenv.mkDerivation rec {
       pname = "mps";
-      version = "1.118.0";
+
+      inherit version;
 
       src = fetchFromGitHub {
         owner = "Ravenbrook";
         repo = "mps";
-        rev = "refs/tags/release-${version}";
-        hash = "sha256-3ql3jWLccgnQHKf23B1en+nJ9rxqmHcWd7aBr93YER0=";
+        inherit rev;
+        hash = sha256;
       };
 
       postPatch = ''
@@ -44,13 +48,13 @@ in
   else
     stdenv.mkDerivation rec {
       pname = "mps";
-      version = "1.118.0";
+      inherit version;
 
       src = fetchFromGitHub {
         owner = "Ravenbrook";
         repo = "mps";
-        rev = "refs/tags/release-${version}";
-        hash = "sha256-3ql3jWLccgnQHKf23B1en+nJ9rxqmHcWd7aBr93YER0=";
+        inherit rev;
+        hash = sha256;
       };
       sourceRoot = "${src.name}/code";
 
