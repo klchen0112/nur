@@ -20,5 +20,7 @@
   TsangerJinKai02 = pkgs.callPackage ./pkgs/TsangerJinKai02 {};
   Jigmo = pkgs.callPackage ./pkgs/Jigmo {};
   mps-darwin = pkgs.callPackage ./pkgs/mps-darwin {};
+
+  mamba-cpp = pkgs.callPackage ./pkgs/mamba-cpp {};
 }
 // (pkgs.callPackage ./pkgs/catppuccin {})
