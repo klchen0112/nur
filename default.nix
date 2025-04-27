@@ -21,4 +21,10 @@
   Jigmo = pkgs.callPackage ./pkgs/Jigmo { };
   mps-darwin = pkgs.callPackage ./pkgs/mps-darwin { };
 
+  # firefox extensions
+  # https://gitlab.com/rycee/nur-expressions/-/blob/master/pkgs/mozilla-addons-to-nix/default.nix?ref_type=heads
+  # cd pkgs/firefox-addons/ && mozilla-addons-to-nix addons.json generated-firefox-addons.nix
+  firefox-addons =
+    pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/firefox-addons { });
+
 }
